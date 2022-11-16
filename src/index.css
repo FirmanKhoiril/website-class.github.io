@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.slider .figure div {
+  float: left;
+  width: 20%;
+}
+.slider .figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  animation: animate 40s infinite;
+}
+.item {
+  transition: all 0.3s ease;
+}
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-5;
+}
+.image {
+  background: url(assets/bgWhite.png);
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-repeat: repeat;
+}
+:root {
+  --font-base: "DM Sans", sans-serif;
+
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #1e293b;
+  --lightGray-color: #334155;
+  --gray-color: #0f172a;
+  --brown-color: #1e293b;
+  --white-color: #1e293b;
+}
+@keyframes animate {
+  0% {
+    left: 0%;
+  }
+  10% {
+    left: 0%;
+  }
+  12% {
+    left: -100%;
+  }
+  14% {
+    left: -100%;
+  }
+  22% {
+    left: -100%;
+  }
+  24% {
+    left: -200%;
+  }
+  34% {
+    left: -200%;
+  }
+  36% {
+    left: -300%;
+  }
+  42% {
+    left: -300%;
+  }
+  46% {
+    left: -400%;
+  }
+  48% {
+    left: -400%;
+  }
+  56% {
+    left: -400%;
+  }
+  58% {
+    left: -400%;
+  }
+  60% {
+    left: -300%;
+  }
+  70% {
+    left: -300%;
+  }
+  72% {
+    left: -200%;
+  }
+  82% {
+    left: -200%;
+  }
+  84% {
+    left: -100%;
+  }
+  94% {
+    left: -100%;
+  }
+  96% {
+    left: 0%;
+  }
 }
